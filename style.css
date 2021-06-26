@@ -1,0 +1,413 @@
+:root {
+    --bg-color: #101010;
+    --accent-color: rgba(88, 214, 170, .85);
+    --light-color: #fff;
+    --orange-color: #ffb347;
+    --purple-color: #C3B1E1;
+    --blue-color: #AEC6CF;
+    --green-color: #C1E1C1;
+    --red-color: #ff6961;
+    --yellow-color: #FDFD96;
+    --typewriterSpeed: 4s;
+}
+
+html, body {
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: var(--bg-color);
+}
+
+div.home {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+div.home h1.name {
+    font-size: clamp(5rem, 3vw + 1rem, 4rem);
+    font-family: "Source Code Pro", monospace;
+    width: max-content;
+    color: var(--light-color);
+    position: relative;
+}
+
+div.home h1.name::before,
+div.home h1.name::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+div.home h1::before {
+    background: var(--bg-color);
+    animation: typewriter var(--typewriterSpeed) steps(24) 2s forwards;
+}
+
+div.home h1::after {
+    width: .125em;
+    background: var(--light-color);
+    animation: typewriter var(--typewriterSpeed) steps(24) 2s forwards, blink 750ms steps(24) infinite;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+p.welcome {
+    color: var(--accent-color);
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    background-color: var(--accent-color);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(-3rem);
+    animation: fadeInDown 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1.logo {
+    color: var(--bg-color);
+    font-size: 2.4rem;
+}
+
+input.nav-toggle {
+    display: none;
+}
+
+label.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span, 
+.nav-toggle-label span::before, 
+.nav-toggle-label span::after {
+    display: block;
+    background: var(--light-color);
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before, 
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--accent-color);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: var(--bg-color);
+}
+
+input.nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+}
+
+input.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 1000px) {
+    label.nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1.5fr auto minmax(600px, 3fr) 1fr;
+    }
+
+    h1.logo {
+        grid-column: 1 / 3;
+    }
+
+    nav {
+        all: unset;
+        grid-column: 3/4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: var(--bg-color);
+        position: absolute;
+        bottom: -.5em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        transform: scale(1, 1);
+    }
+}
+
+div.about {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    width: 80vw;
+    display: block;
+    text-align: left;
+    color: var(--light-color);
+    font-family: 'Source Code Pro', monospace;
+}
+
+div.text {
+    margin-top: 10em;
+    place-content: center;
+}
+
+div.about > div.text {
+    max-width: 55%;
+    float: left;
+}
+
+div > h1.code{
+    font-size: 3rem;
+}
+
+div.about > div.text p{
+    color: var(--green-color);
+    font-size: 1.5rem;
+    margin-left: 5rem;
+}
+
+div.about > div.text p.more {
+    color: var(--orange-color);
+}
+
+[data-aos="typewriter1"] {
+    display: table;
+    opacity: 0;
+}
+
+[data-aos="typewriter1"].aos-animate {
+    position: relative;
+    opacity: 1;
+}
+
+[data-aos="typewriter1"].aos-animate::before,
+[data-aos="typewriter1"].aos-animate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+[data-aos="typewriter1"].aos-animate::before {
+    background: var(--bg-color);
+    animation: typewriterP 750ms steps(16) 1s forwards;
+}
+
+[data-aos="typewriter1"].aos-animate::after {
+    width: .125em;
+    background: var(--light-color);
+    animation: typewriterP 750ms steps(16) 1s forwards, blink 250ms steps(16) 1s infinite;
+}
+
+[data-aos="typewriter2"] {
+    display: table;
+    opacity: 0;
+}
+
+[data-aos="typewriter2"].aos-animate {
+    position: relative;
+    opacity: 1;
+}
+
+[data-aos="typewriter2"].aos-animate::before,
+[data-aos="typewriter2"].aos-animate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+[data-aos="typewriter2"].aos-animate::before {
+    background: var(--bg-color);
+    animation: typewriterP 750ms steps(18) calc(750ms + 1s) forwards;
+}
+
+[data-aos="typewriter2"].aos-animate::after {
+    width: .125em;
+    background: var(--light-color);
+    opacity: 0;
+    animation: hide 0s calc(750ms + 1s) forwards, typewriterP 750ms steps(18) calc(750ms + 1s) forwards, blink 250ms steps(18) calc(750ms + 1s) infinite;
+}
+
+@keyframes hide {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes typewriterP {
+    to {
+        left: 100%;
+    }
+    100% {
+        overflow: hidden;
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+
+}
+
+div.about > div.text p.print {
+    font-family: "Source Sans Pro", sans-serif;
+    color: var(--orange-color);
+    margin-left: 10rem;
+    letter-spacing: 0.1em;
+}
+
+div.about > div.text p.print a {
+    color: var(--orange-color);
+}
+
+div.about > div.image {
+    overflow: hidden;
+    padding-left: 10em;
+    padding-top: 15em;
+}
+
+div.about > div.image > img {
+    width: 70%;
+    height: 70%;
+    border: 7px solid var(--light-color);
+}
+
+div.projects {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    width: 80vw;
+    display: block;
+    place-content: left;
+    text-align: left;
+    color: var(--light-color);
+    font-family: 'Source Code Pro', monospace;
+}
+
+div.clownsweeper {
+    padding-left: 10em;
+}
+
+div.clownsweeper h1 {
+    color: var(--purple-color);
+}

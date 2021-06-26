@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+        <title>13lack13lood</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="logo">Harry Zhu</h1>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#socials">Socials</a></li>
+                </ul>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </header>
+        <div class="home" id="home">
+            <h1 class="name">Hello, my name is Harry.</h1>
+            <p class="welcome">Welcome to my website!</p>
+        </div>
+        <div id="about" class="about">
+            <div class="text">
+                <h1 class="code" data-aos="fade-right" data-aos-duration="1000">about(Harry) {</h1>
+                <div >
+                    <p data-aos="typewriter1">name = Harry Zhu</p>
+                    <p data-aos="typewriter2">age = 15 years old</p>
+                </div>
+                <br>
+                <p class="more" data-aos="fade-left" data-aos-delay="2750">System.out.println("</p>
+                <p class="print" data-aos="fade-right" data-aos-delay="3000">Hi! I'm a Grade 11 IB student and I enjoy coding, playing games, and swimming. 
+                    I'm proficient in Java, Python, HTML, and CSS. 
+                    As for human languages, I understand Engligh, French, and Chinese.
+                    My favourite school subjects are math, physics, and computer science and I participate in contests such as CCC, Fermat, Pascal, etc.
+                    During my free time, I like to play <a href="https://na.op.gg/summoner/userName=asianricefarmer2">League of Legends</a> and doing coding projects.
+                </p>
+                <p class="more"  data-aos="fade-left" data-aos-delay="2750">")</p>
+                <h1 class="code" data-aos="fade-right" data-aos-duration="1000">}</h1>
+            </div>
+            <div class="image" data-aos="fade-left" data-aos-duration="750" data-aos-delay="2500">
+                <img src="./res/face.jpg" alt="Harry Zhu Photo">
+            </div>
+        </div>
+        <div class="projects" id="projects">
+            <div class="text">
+                <h1 class="code">projects() {</h1>
+                    <div class="clownsweeper">
+                        <h1>class Clownsweeper {</h1>
+                        <h1>}</h1>
+                    </div>
+                <h1 class="code">}</h1>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+    </body>
+</html>
