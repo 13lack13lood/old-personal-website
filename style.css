@@ -93,7 +93,7 @@ header {
     width: 100%;
     opacity: 0;
     transform: translateY(-3rem);
-    animation: fadeInDown 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+    animation: fadeInDown 2s ease calc(var(--typewriterSpeed) + 3000ms) forwards;
 }
 
 @keyframes fadeInDown {
@@ -392,9 +392,20 @@ div.about > div.image > img {
     border: 7px solid var(--light-color);
 }
 
+[data-aos="image-fade-left"] {
+    opacity: 0;
+    transform: translateX(3em);
+    transition-property: transform, opacity;
+}
+[data-aos="image-fade-left"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 div.projects {
     margin-left: auto;
     margin-right: auto;
+    padding-top: 5em;
     height: 100vh;
     width: 80vw;
     display: block;
