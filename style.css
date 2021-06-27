@@ -102,7 +102,7 @@ header {
     width: 100%;
     opacity: 0;
     transform: translateY(-3rem);
-    animation: fadeInDown 2s ease calc(var(--typewriterSpeed) + 3000ms) forwards;
+    animation: fadeInDown 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
 }
 
 @keyframes fadeInDown {
