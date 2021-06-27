@@ -365,6 +365,7 @@ div.about > div.text p.more {
         left: 100%;
     }
     100% {
+        animation-delay: 500ms;
         overflow: hidden;
         display: none;
         visibility: hidden;
@@ -456,7 +457,7 @@ div.quote1 .start h1{
     background-clip: text;
     color: transparent;
     background-size: 400%;
-    animation: gradient-animation 5s infinite alternate;
+    animation: gradient-animation 3s infinite alternate;
 }
 
 div.quote1 .end h1  {
@@ -465,7 +466,7 @@ div.quote1 .end h1  {
     background-clip: text;
     color: transparent;
     background-size: 400%;
-    animation: gradient-animation 5s infinite alternate-reverse;
+    animation: gradient-animation 3s infinite alternate-reverse;
 }
 
 @keyframes gradient-animation {
@@ -548,4 +549,82 @@ div.clownsweeper {
 
 div.clownsweeper h1 {
     color: var(--purple-color);
+}
+
+[data-aos="typewriter-clowns"] {
+    display: table;
+    opacity: 0;
+}
+
+[data-aos="typewriter-clowns"].aos-animate {
+    position: relative;
+    opacity: 1;
+}
+
+[data-aos="typewriter-clowns"].aos-animate::before,
+[data-aos="typewriter-clowns"].aos-animate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+[data-aos="typewriter-clowns"].aos-animate::before {
+    background: var(--bg-color);
+    animation: typewriterP 1s steps(20) 1s forwards;
+}
+
+[data-aos="typewriter-clowns"].aos-animate::after {
+    width: .125em;
+    background: var(--light-color);
+    animation: typewriterP 1s steps(20) 1s forwards, blink 250ms steps(20) 1s infinite;
+}
+
+div.projects div.box {
+    display: block;
+    width: 70vw;
+    height: 10vh;
+    position: absolute;
+}
+
+div.projects div.box:nth-of-type(1) {
+    z-index: 100;
+}
+
+div.projects div.box:nth-of-type(2) {
+    z-index: 101;
+}
+
+div.projects div.box:nth-of-type(3) {
+    z-index: 102;
+}
+
+div.projects div.box:nth-of-type(4) {
+    z-index: 103;
+}
+
+div.clownsweeper div.box {
+    background-color: var(--purple-color);
+}
+
+[data-aos="reveal-box"] {
+    transition-property: transform;
+    overflow-x: hidden;
+}
+
+[data-aos="reveal-box"].aos-animate {
+    position: relative;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out;
+}
+
+div.clownsweeper > div.text {
+    border: 2px solid var(--purple-color);
+    width: 70vw;
+    height: 40vh;
+    z-index: 1;
+    position: absolute;
 }
