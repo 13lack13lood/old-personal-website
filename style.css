@@ -94,6 +94,11 @@ p.welcome {
     }
 }
 
+p.hidden-text {
+    color: #111111;
+    font-size: 2rem;
+}
+
 header {
     background-color: var(--accent-color);
     text-align: center;
@@ -259,7 +264,8 @@ input.nav-toggle:checked ~ nav a {
 div.about {
     margin-left: auto;
     margin-right: auto;
-    height: 100vh;
+    padding-top: 20vh;
+    height: 80vh;
     width: 80vw;
     display: block;
     text-align: left;
@@ -267,8 +273,7 @@ div.about {
     font-family: 'Source Code Pro', monospace;
 }
 
-div.text {
-    margin-top: 10em;
+div.top > div.text {
     place-content: center;
 }
 
@@ -393,7 +398,7 @@ div.about > div.text p.print a {
 div.about > div.image {
     overflow: hidden;
     padding-left: 10em;
-    padding-top: 15em;
+    padding-top: 5em;
 }
 
 div.about > div.image > img {
@@ -415,7 +420,7 @@ div.about > div.image > img {
 div.quote1 {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 17vh;
+    padding-top: 10vh;
     width: 60vw;
     height: 70vh;
     display: block;
@@ -443,10 +448,7 @@ div.quote1 .start div,
 div.quote1 .end div {
     display: inline-block;
     border: 2px solid white;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    padding-left: .5em;
-    padding-right: .5em;
+    padding: 0.5em 0.5em;
     color: var(--bg-color);
     box-shadow: var(--bg-color);
 }
@@ -515,8 +517,7 @@ div.quote1 .author button span {
     font-weight: 400;
     font-style: italic; 
     font-family: "Source Sans Pro", sans-serif;
-    /* color: var(--light-color); */
-    background-image: linear-gradient(to right, white,#d65db1 );
+    background-image: linear-gradient(to right, white,#d65db1);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -529,11 +530,10 @@ div.quote1 .author button span:hover {
     background-position: right;
 }
 
-
 div.projects {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 5em;
+    padding-top: 20vh;
     height: 100vh;
     width: 80vw;
     display: block;
@@ -549,6 +549,7 @@ div.clownsweeper {
 
 div.clownsweeper h1 {
     color: var(--purple-color);
+    left: 3rem;
 }
 
 [data-aos="typewriter-clowns"] {
@@ -573,13 +574,13 @@ div.clownsweeper h1 {
 
 [data-aos="typewriter-clowns"].aos-animate::before {
     background: var(--bg-color);
-    animation: typewriterP 1s steps(20) 1s forwards;
+    animation: typewriterP 800ms steps(20) 800ms forwards;
 }
 
 [data-aos="typewriter-clowns"].aos-animate::after {
     width: .125em;
     background: var(--light-color);
-    animation: typewriterP 1s steps(20) 1s forwards, blink 250ms steps(20) 1s infinite;
+    animation: typewriterP 800ms steps(20) 800ms forwards, blink 250ms steps(20) 800ms infinite;
 }
 
 div.projects div.box {
@@ -587,22 +588,12 @@ div.projects div.box {
     width: 70vw;
     height: 10vh;
     position: absolute;
-}
-
-div.projects div.box:nth-of-type(1) {
-    z-index: 100;
+    border: 2px solid var(--purple-color);
+    margin-top: -10vh;
 }
 
 div.projects div.box:nth-of-type(2) {
-    z-index: 101;
-}
-
-div.projects div.box:nth-of-type(3) {
-    z-index: 102;
-}
-
-div.projects div.box:nth-of-type(4) {
-    z-index: 103;
+    margin-top: -20vh;
 }
 
 div.clownsweeper div.box {
@@ -618,13 +609,55 @@ div.clownsweeper div.box {
     position: relative;
     transform: scale(0, 1);
     transform-origin: left;
-    transition: transform ease-in-out;
+    transition: transform 500ms ease-in-out ;
 }
 
 div.clownsweeper > div.text {
     border: 2px solid var(--purple-color);
     width: 70vw;
-    height: 40vh;
-    z-index: 1;
-    position: absolute;
+    height: 20vh;
+}
+
+div.clownsweeper > div.text p{
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding-left: 4em;
+    padding-right: 4em;
+    color: var(--purple-color);
+    margin-bottom: 0;
+}
+
+div.clownsweeper > div.text div {
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+div.clownsweeper > div.text div p {
+    border: 2px solid var(--purple-color);
+    display: inline-block;
+    width: 10rem;
+    padding: 0;
+    text-align: center;
+}
+
+div.clownsweeper > div.text div p.github {
+    float: right;
+}
+
+div.clownsweeper > div.text div p.github a{
+    text-decoration: none;
+    color: var(--purple-color);
+}
+
+div.clownsweeper > div.text div p.github:hover {
+    float: right;
+    background-color: var(--purple-color);
+    color: transparent;
+    text-align: center;
+}
+
+div.clownsweeper > div.text div p.github:hover a{
+    color: var(--bg-color);
+    text-align: center;
 }
