@@ -1,6 +1,6 @@
 :root {
     --bg-color: #101010;
-    --accent-color: rgba(88, 214, 170, .85);
+    --accent-color: rgba(88, 214, 170, 0.9);
     --light-color: #fff;
     --orange-color: #ffb347;
     --purple-color: #C3B1E1;
@@ -9,6 +9,15 @@
     --red-color: #ff6961;
     --yellow-color: #FDFD96;
     --typewriterSpeed: 4s;
+    --quote1-gradient: linear-gradient(
+        45deg,
+        #845ec2,
+        #d65db1,
+        #ff6f91,
+        #ff9671,
+        #ffc75f,
+        #f9f871
+    );
 }
 
 html, body {
@@ -387,8 +396,8 @@ div.about > div.image {
 }
 
 div.about > div.image > img {
-    width: 70%;
-    height: 70%;
+    width: 60%;
+    height: 60%;
     border: 7px solid var(--light-color);
 }
 
@@ -401,6 +410,124 @@ div.about > div.image > img {
     opacity: 1;
     transform: translateX(0);
 }
+
+div.quote1 {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 17vh;
+    width: 60vw;
+    height: 70vh;
+    display: block;
+}
+
+div.quote1 > div.box {
+    display: table;
+    border: 2px solid red;
+}
+
+div.quote1 h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    font-style: italic; 
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+div.quote1 .start {
+    text-align: left;
+    padding-bottom: 6em;
+    background-color: var(--bg-color);
+}
+
+div.quote1 .start div,
+div.quote1 .end div {
+    display: inline-block;
+    border: 2px solid white;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+    color: var(--bg-color);
+    box-shadow: var(--bg-color);
+}
+
+div.quote1 .start h1{
+    background-image: var(--quote1-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: gradient-animation 5s infinite alternate;
+}
+
+div.quote1 .end h1  {
+    background-image: var(--quote1-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: gradient-animation 5s infinite alternate-reverse;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+div.quote1 .end {
+    text-align: right;
+    padding-top: 6em;
+    padding-bottom: 6em;
+    background-color: var(--bg-color);
+}
+
+div.quote1 .author {
+    position: relative;
+    top: 3em;
+    display: inline;
+}
+
+div.quote1 .author button {
+    background-color: var(--bg-color);
+    border: 2px solid var(--light-color);
+}
+
+div.quote1 .author button .hover {
+    display: none;
+}
+
+div.quote1 .author button:hover .noHover {
+    display: none;
+}
+
+div.quote1 .author button:hover .hover {
+    display: inline;
+}
+
+div.quote1 .author button span {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: italic; 
+    font-family: "Source Sans Pro", sans-serif;
+    /* color: var(--light-color); */
+    background-image: linear-gradient(to right, white,#d65db1 );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 1000%;
+    background-position: left;
+    transition: background-position 1s;
+}
+
+div.quote1 .author button span:hover {
+    background-position: right;
+}
+
 
 div.projects {
     margin-left: auto;
