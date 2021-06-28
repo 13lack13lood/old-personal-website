@@ -8,6 +8,7 @@
     --green-color: #C1E1C1;
     --red-color: #ff6961;
     --yellow-color: #FDFD96;
+    --lightblue-color: #c4faf8;
     --typewriterSpeed: 4s;
     --quote1-gradient: linear-gradient(
         45deg,
@@ -501,6 +502,11 @@ div.quote1 .author {
     display: inline;
 }
 
+div.quote1 .author p {
+    font-size: 2rem;
+    color: #121212;
+}
+
 div.quote1 .author button {
     background-color: var(--bg-color);
     border: 2px solid var(--light-color);
@@ -599,6 +605,67 @@ div.quote1 .author button span:hover {
     animation: typewriterP 800ms steps(11) 800ms forwards, blink 250ms steps(11) 800ms infinite;
 }
 
+[data-aos="typewriter-website"] {
+    display: table;
+    opacity: 0;
+}
+
+[data-aos="typewriter-website"].aos-animate {
+    position: relative;
+    opacity: 1;
+}
+
+[data-aos="typewriter-website"].aos-animate::before,
+[data-aos="typewriter-website"].aos-animate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+[data-aos="typewriter-website"].aos-animate::before {
+    background: var(--bg-color);
+    animation: typewriterP 800ms steps(16) 800ms forwards;
+}
+
+[data-aos="typewriter-website"].aos-animate::after {
+    width: .125em;
+    background: var(--light-color);
+    animation: typewriterP 800ms steps(16) 800ms forwards, blink 250ms steps(16) 800ms infinite;
+}
+
+[data-aos="typewriter-machine"] {
+    display: table;
+    opacity: 0;
+}
+
+[data-aos="typewriter-machine"].aos-animate {
+    position: relative;
+    opacity: 1;
+}
+
+[data-aos="typewriter-machine"].aos-animate::before,
+[data-aos="typewriter-machine"].aos-animate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+[data-aos="typewriter-machine"].aos-animate::before {
+    background: var(--bg-color);
+    animation: typewriterP 800ms steps(24) 800ms forwards;
+}
+
+[data-aos="typewriter-machine"].aos-animate::after {
+    width: .125em;
+    background: var(--light-color);
+    animation: typewriterP 800ms steps(24) 800ms forwards, blink 250ms steps(24) 800ms infinite;
+}
 [data-aos="reveal-box"] {
     transition-property: transform;
 
@@ -776,4 +843,36 @@ div.website > div.text div p.github a{
 
 div.website > div.text div p.github:hover {
     background-color: var(--yellow-color);
+}
+
+div.website > div.text p a{
+    color: var(--yellow-color);
+}
+
+div.machine > div h1 {
+    color: var(--lightblue-color);
+}
+
+div.machine > div.text {
+    border: 2px solid var(--lightblue-color);
+}
+
+div.machine > div.text p {
+    color: var(--lightblue-color);
+}
+
+div.machine > div.text div p {
+    border: 2px solid var(--lightblue-color);
+}
+
+div.machine > div.text p a{
+    color: var(--lightblue-color);
+}
+
+div.machine > div.text div p.github a{
+    color: var(--lightblue-color);
+}
+
+div.machine > div.text div p.github:hover {
+    background-color: var(--lightblue-color);
 }
