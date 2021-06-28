@@ -422,7 +422,7 @@ div.quote1 {
     margin-right: auto;
     padding-top: 200px;
     width: 60vw;
-    height: 70vh;
+    height: 1500px;
     display: block;
 }
 
@@ -626,9 +626,10 @@ div.projects > div > div {
 div.projects div.box {
     display: block;
     width: 70vw;
-    height: 10vh;
+    height: 20vh;
     position: absolute;
     margin-top: -10vh;
+    padding: 0;
 }
 
 div.projects div.box:nth-of-type(2) {
