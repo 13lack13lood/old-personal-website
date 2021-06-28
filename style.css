@@ -603,13 +603,14 @@ div.quote1 .author button span:hover {
     transition-property: transform;
     overflow-x: hidden;
     transform-origin: left;
+    transform: scale(0, 1);
 }
 
 [data-aos="reveal-box"].aos-animate {
     position: relative;
-    transform: scale(0, 1);
+    transform: scale(1, 1);
     transform-origin: left;
-    transition: transform 500ms ease-in-out ;
+    transition: transform 500ms ease-in-out;
 }
 
 div.projects {
@@ -617,6 +618,7 @@ div.projects {
     margin-right: auto;
     padding-top: 13vh;
     width: 80vw;
+    height: 200vh;
     display: block;
     text-align: left;
     color: var(--light-color);
@@ -627,16 +629,7 @@ div.projects > div.wrapper > div {
     padding-left: 10em;
     padding-top: 3vh;
     padding-bottom: 3vh;
-    height: 100%;
-}
-
-div.projects div.box {
-    display: block;
-    width: 70vw;
-    height: 25%;
-    position: absolute;
-    margin-top: -12.5%;
-    padding: 0;
+    height: 30%;
 }
 
 div.projects > div div h1 {
@@ -694,11 +687,6 @@ div.clownsweeper > div h1 {
     color: var(--purple-color);
 }
 
-div.clownsweeper div.box {
-    background-color: var(--purple-color);
-    border: 2px solid var(--purple-color);
-}
-
 div.clownsweeper > div.text {
     border: 2px solid var(--purple-color);
 }
@@ -723,11 +711,6 @@ div.crossy > div h1 {
     color: var(--blue-color);
 }
 
-div.crossy div.box {
-    background-color: var(--blue-color);
-    border: 2px solid var(--blue-color);
-}
-
 div.crossy > div.text {
     border: 2px solid var(--blue-color);
 }
@@ -750,11 +733,6 @@ div.crossy > div.text div p.github:hover {
 
 div.tictactoe > div h1 {
     color: var(--red-color);
-}
-
-div.tictactoe div.box {
-    background-color: var(--red-color);
-    border: 2px solid var(--red-color);
 }
 
 div.tictactoe > div.text {
