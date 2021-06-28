@@ -420,7 +420,7 @@ div.about > div.image > img {
 div.quote1 {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 10vh;
+    padding-top: 200px;
     width: 60vw;
     height: 70vh;
     display: block;
@@ -608,7 +608,7 @@ div.quote1 .author button span:hover {
 div.projects {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 20vh;
+    padding-top: 300px;
     height: 200vh;
     width: 80vw;
     display: block;
