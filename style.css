@@ -632,7 +632,7 @@ div.projects > div > div {
 div.projects div.box {
     display: block;
     width: 70vw;
-    height: 10vh;
+    height: 50%;
     position: absolute;
     margin-top: -10vh;
     padding: 0;
@@ -653,12 +653,14 @@ div.projects div > div.text div p.github:hover a{
 
 div.projects div > div.text {
     width: 70vw;
-    height: 20vh;
+    height: 100%;
 }
 
 div.projects div > div.text div {
     margin-left: 6rem;
     margin-right: 6rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
 
 div.projects div > div.text p{
