@@ -601,7 +601,7 @@ div.quote1 .author button span:hover {
 
 [data-aos="reveal-box"] {
     transition-property: transform;
-    overflow-x: hidden;
+
     transform-origin: left;
     transform: scale(0, 1);
 }
@@ -629,7 +629,6 @@ div.projects > div.wrapper > div {
     padding-left: 10em;
     padding-top: 3vh;
     padding-bottom: 3vh;
-    height: 30%;
 }
 
 div.projects > div div h1 {
@@ -642,7 +641,7 @@ div.projects div > div.text div p.github:hover a{
 }
 
 div.projects div > div.text {
-    width: 70vw;
+    width: 60vw;
     height: 100%;
 }
 
