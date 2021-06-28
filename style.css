@@ -623,23 +623,20 @@ div.projects {
     font-family: 'Source Code Pro', monospace;
 }
 
-div.projects > div > div {
+div.projects > div.wrapper > div {
     padding-left: 10em;
     padding-top: 3vh;
     padding-bottom: 3vh;
+    height: 100%;
 }
 
 div.projects div.box {
     display: block;
     width: 70vw;
-    height: 50%;
+    height: 25%;
     position: absolute;
-    margin-top: -10vh;
+    margin-top: -12.5%;
     padding: 0;
-}
-
-div.projects div.box:nth-of-type(2) {
-    margin-top: -20vh;
 }
 
 div.projects > div div h1 {
@@ -656,7 +653,7 @@ div.projects div > div.text {
     height: 100%;
 }
 
-div.projects div > div.text div {
+div.projects div > div.text > div {
     margin-left: 6rem;
     margin-right: 6rem;
     padding-top: 1rem;
