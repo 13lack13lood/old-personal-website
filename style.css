@@ -1,6 +1,6 @@
 :root {
     --bg-color: #101010;
-    --accent-color: rgba(88, 214, 170, 0.9);
+    --accent-color: #51c39b;
     --light-color: #fff;
     --orange-color: #ffb347;
     --purple-color: #C3B1E1;
@@ -421,9 +421,16 @@ div.quote1 {
     margin-left: auto;
     margin-right: auto;
     padding-top: 200px;
+    top: 200px;
     width: 60vw;
-    height: 1500px;
+    /* height: 100vh; */
     display: block;
+}
+
+@media screen and (max-width: 1000px) {
+    div.quote1 {
+        padding-top: 400px;
+    }
 }
 
 div.quote1 > div.box {
@@ -608,8 +615,7 @@ div.quote1 .author button span:hover {
 div.projects {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 300px;
-    height: 200vh;
+    padding-top: 13vh;
     width: 80vw;
     display: block;
     text-align: left;
@@ -626,7 +632,7 @@ div.projects > div > div {
 div.projects div.box {
     display: block;
     width: 70vw;
-    height: 20vh;
+    height: 10vh;
     position: absolute;
     margin-top: -10vh;
     padding: 0;
