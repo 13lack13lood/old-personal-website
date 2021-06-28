@@ -753,3 +753,27 @@ div.tictactoe > div.text div p.github a{
 div.tictactoe > div.text div p.github:hover {
     background-color: var(--red-color);
 }
+
+div.website > div h1 {
+    color: var(--yellow-color);
+}
+
+div.website > div.text {
+    border: 2px solid var(--yellow-color);
+}
+
+div.website > div.text p {
+    color: var(--yellow-color);
+}
+
+div.website > div.text div p {
+    border: 2px solid var(--yellow-color);
+}
+
+div.website > div.text div p.github a{
+    color: var(--yellow-color);
+}
+
+div.website > div.text div p.github:hover {
+    background-color: var(--yellow-color);
+}
