@@ -885,7 +885,7 @@ div.quote2 {
     margin-right: auto;
     margin-top: 200px;
     width: 60vw;
-    overflow: visible;
+    overflow: hidden;
 }
 
 div.quote2 h1 {
