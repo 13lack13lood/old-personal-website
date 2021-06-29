@@ -19,13 +19,20 @@
         #ffc75f,
         #f9f871
     );
+
+    --quote2-gradient: linear-gradient(
+        45deg,
+        #DC2424,
+        #4A569D
+    )
 }
 
 html, body {
     margin: 0;
     font-family: "Source Sans Pro", sans-serif;
     min-height: 100vh;
-    overflow-x: hidden;
+    width:100%;
+    overflow-x:hidden;
     scroll-behavior: smooth;
     background: var(--bg-color);
 }
@@ -265,7 +272,7 @@ input.nav-toggle:checked ~ nav a {
 div.about {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 20vh;
+    padding-top: 15vh;
     height: 80vh;
     width: 80vw;
     display: block;
@@ -433,16 +440,14 @@ div.quote1 {
     }
 }
 
-div.quote1 > div.box {
-    display: table;
-    border: 2px solid red;
-}
-
 div.quote1 h1 {
     font-size: 3rem;
     font-weight: 800;
     font-style: italic; 
     font-family: "Source Sans Pro", sans-serif;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    overflow-y: hidden;
 }
 
 div.quote1 .start {
@@ -873,4 +878,164 @@ div.machine > div.text div p.github a{
 
 div.machine > div.text div p.github:hover {
     background-color: var(--lightblue-color);
+}
+
+div.quote2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    width: 60vw;
+    overflow: visible;
+}
+
+div.quote2 h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    font-style: italic; 
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 0.5em;
+    border: 2px solid var(--light-color);
+    display: inline-block;
+}
+
+div.quote2 .start {
+    text-align: left;
+    background-color: var(--bg-color);
+}
+
+div.quote2 .start h1{
+    background-image: var(--quote2-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: gradient-animation 3s infinite alternate;
+}
+
+div.quote2 .twenty{
+    text-align: center;
+}
+
+div.quote2 .twenty h1 {
+    font-size: 15rem;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    right: 10vw;
+    color: var(--light-color);
+    border: none;
+}
+
+div.quote2 .twenty h1.years {
+    font-size: 3rem;
+}
+
+div.quote2 .middle {
+    text-align: right;
+}
+
+div.quote2 .middle h1 {
+    background-image: var(--quote2-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: gradient-animation 3s infinite alternate-reverse;
+}
+
+div.quote2 .five {
+    text-align: center;
+}
+
+div.quote2 .five h1{
+    display: inline-block;
+    font-size: 10rem;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--light-color);
+    border: none;
+}
+
+div.quote2 .minutes h1 {
+    background-image: var(--quote2-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: gradient-animation 3s infinite alternate;
+}
+
+div.quote2 .end1 {
+    text-align: center;
+}
+
+div.quote2 .end1 h1 {
+    background-image: var(--quote2-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: gradient-animation 3s infinite alternate-reverse;
+}
+
+div.quote2 .end2 {
+    text-align: right;
+}
+
+div.quote2 .end2 h1 {
+    background-image: var(--quote2-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: gradient-animation 3s infinite alternate;
+}
+
+div.quote2 .author {
+    padding-top: 10em;
+    display: inline;
+    color: var(--light-color);
+}
+
+div.quote2 .author p {
+    font-size: 2rem;
+    color: #121212;
+}
+
+div.quote2 .author button {
+    background-color: var(--bg-color);
+    border: 2px solid var(--light-color);
+}
+
+div.quote2 .author button .hover {
+    display: none;
+}
+
+div.quote2 .author button:hover .noHover {
+    display: none;
+}
+
+div.quote2 .author button:hover .hover {
+    display: inline;
+}
+
+div.quote2 .author button span {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: italic; 
+    font-family: "Source Sans Pro", sans-serif;
+    background-image: linear-gradient(to right, white,#4A569D);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 1000%;
+    background-position: left;
+    transition: background-position 1s;
+}
+
+div.quote2 .author button span:hover {
+    background-position: right;
 }
