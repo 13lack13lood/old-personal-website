@@ -424,7 +424,6 @@ div.quote1 {
     padding-top: 200px;
     top: 200px;
     width: 60vw;
-    /* height: 100vh; */
     display: block;
 }
 
@@ -685,7 +684,6 @@ div.projects {
     margin-right: auto;
     padding-top: 13vh;
     width: 80vw;
-    height: 200vh;
     display: block;
     text-align: left;
     color: var(--light-color);
@@ -709,7 +707,7 @@ div.projects div > div.text div p.github:hover a{
 
 div.projects div > div.text {
     width: 60vw;
-    height: 100%;
+    overflow: hidden;
 }
 
 div.projects div > div.text > div {
