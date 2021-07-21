@@ -19,12 +19,14 @@
         #ffc75f,
         #f9f871
     );
-
     --quote2-gradient: linear-gradient(
         45deg,
         #DC2424,
         #4A569D
-    )
+    );
+    --insta-color: #C13584;
+    --twitter-color: #1DA1F2;
+    --discord-color: #7289DA;
 }
 
 html, body {
@@ -105,6 +107,25 @@ p.welcome {
 p.hidden-text {
     color: #111111;
     font-size: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+    div.home h1.name {
+        padding-top: 10vh;
+        width: 100vw;
+        opacity: 0;
+        transform: translateY(3rem);
+        animation: fadeInUp 2s ease forwards;
+    }
+
+    div.home h1::before,
+    div.home h1::after {
+        all: unset;
+    }
+
+    p.welcome {
+        animation-delay: 2s;
+    }
 }
 
 header {
@@ -269,6 +290,12 @@ input.nav-toggle:checked ~ nav a {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    header {
+        animation-delay: 2s;
+    }
+}
+
 div.about {
     margin-left: auto;
     margin-right: auto;
@@ -292,6 +319,8 @@ div.about > div.text {
 
 div > h1.code{
     font-size: 3rem;
+    color: var(--light-color);
+    font-family: 'Source Code Pro', monospace;
 }
 
 div.about > div.text p{
@@ -406,7 +435,6 @@ div.about > div.text p.print a {
 div.about > div.image {
     overflow: hidden;
     padding-left: 10em;
-    padding-top: 5em;
 }
 
 div.about > div.image > img {
@@ -425,18 +453,78 @@ div.about > div.image > img {
     transform: translateX(0);
 }
 
+@media screen and (max-width: 1000px) {
+    div.about {
+        width: 95vw;
+    }
+
+    div.about > div.text {
+        max-width: 95vw;
+        float: none;
+    }
+
+    div.about > div.text p.print {
+        margin-left: 5rem;
+        margin-right: 1rem;
+    }
+
+    div.about > div.image > img {
+        transform: scale(1);
+        width: 90%;
+        height: 90%;
+    }
+
+    div.about > div.image {
+        padding-left: 0;
+        margin-left: 1.5rem;
+        margin-right: auto;
+    }
+
+    [data-aos="typewriter1"] {
+        display: table;
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    
+    [data-aos="typewriter1"].aos-animate {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    [data-aos="typewriter1"].aos-animate::before,
+    [data-aos="typewriter1"].aos-animate::after {
+        all: unset;
+    }
+    
+    [data-aos="typewriter2"] {
+        display: table;
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    
+    [data-aos="typewriter2"].aos-animate {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    [data-aos="typewriter2"].aos-animate::before,
+    [data-aos="typewriter2"].aos-animate::after {
+        all: unset;
+    }
+}
+
 div.quote1 {
     margin-left: auto;
     margin-right: auto;
     padding-top: 200px;
-    top: 200px;
     width: 60vw;
     display: block;
 }
 
 @media screen and (max-width: 1000px) {
     div.quote1 {
-        padding-top: 400px;
+        margin-top: 150vh;
+        width: 80vw;
     }
 }
 
@@ -670,15 +758,14 @@ div.quote1 .author button span:hover {
     background: var(--light-color);
     animation: typewriterP 800ms steps(24) 800ms forwards, blink 250ms steps(24) 800ms infinite;
 }
+
 [data-aos="reveal-box"] {
     transition-property: transform;
-
     transform-origin: left;
     transform: scale(0, 1);
 }
 
 [data-aos="reveal-box"].aos-animate {
-    position: relative;
     transform: scale(1, 1);
     transform-origin: left;
     transition: transform 500ms ease-in-out;
@@ -880,12 +967,45 @@ div.machine > div.text div p.github:hover {
     background-color: var(--lightblue-color);
 }
 
+@media screen and (max-width: 1000px) {
+    div.projects div > div.text div p.github {
+        float: none;
+    }
+
+    div.projects > div.wrapper > div {
+        padding-left: 0;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+
+    div.projects div > div.text {
+        width: 80vw;
+    }
+
+    div.projects div > div.text p{
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    div.projects > div div.machine h1 {
+        left: 0.5rem;
+    }
+
+    div.projects > div div.website h1 {
+        left: 0.5rem;
+    }
+}
+
 div.quote2 {
     margin-left: auto;
     margin-right: auto;
     margin-top: 200px;
     width: 60vw;
+    padding-bottom: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
     overflow: hidden;
+    display: block;
 }
 
 div.quote2 h1 {
@@ -1039,3 +1159,158 @@ div.quote2 .author button span {
 div.quote2 .author button span:hover {
     background-position: right;
 }
+
+div.socials {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 150px;
+}
+
+div.socials div {
+    width: 60vw;
+    margin: auto;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+div.socials div.wrapper div {
+    display: flex;
+}
+
+div.socials div img {
+    width: 200px;
+    height: 200px; 
+}
+
+div.socials div div.text {
+    display: block;
+    padding: 0;
+    height: 196px;
+    width: max-content;
+    text-align: left;
+    place-content: left;
+    margin: 0;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+div.socials div div.text p,
+div.socials div div.text a {
+    color: var(--light-color);
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+div.socials div div.text p {
+    padding-bottom: 1em;
+}
+
+div.socials div div.text a {
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5em;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+div.socials div.twitter div.text h1 {
+    color: var(--twitter-color);
+}
+
+div.socials div.twitter div.text a:hover {
+    background-color: var(--twitter-color);
+}
+
+div.socials .twitter .text {
+    border: 2px solid var(--twitter-color);
+}
+
+div.socials div.twitter a {
+    border: 2px solid var(--twitter-color);
+}
+
+div.socials div.insta div.text h1 {
+    color: var(--insta-color);
+}
+
+div.socials div.insta div.text a:hover {
+    background-color: var(--insta-color);
+}
+
+div.socials .insta .text {
+    border: 2px solid var(--insta-color);
+}
+
+div.socials div.insta a {
+    border: 2px solid var(--insta-color);
+}
+
+div.socials div.discord div.text h1 {
+    color: var(--discord-color);
+}
+
+div.socials div.discord div.text a:hover {
+    background-color: var(--discord-color);
+}
+
+div.socials .discord .text {
+    border: 2px solid var(--discord-color);
+}
+
+div.socials div.discord a {
+    border: 2px solid var(--discord-color);
+}
+
+div.socials div.github div.text h1 {
+    color: white;
+}
+
+div.socials div.github div.text a:hover {
+    background-color: white;
+    color: black;
+}
+
+div.socials .github .text {
+    border: 2px solid black;
+}
+
+div.socials div.github a {
+    border: 2px solid white;
+}
+
+div.socials div.gmail div.text h1 {
+    color: white;
+}
+
+div.socials div.gmail div.text .button:hover {
+    background-color: white;
+    color: black;
+}
+
+div.socials div.gmail div.text .button:hover + .email {
+    color: white;
+}
+
+div.socials .gmail .text {
+    border: 2px solid white;
+}
+
+div.socials div.gmail p.button {
+    border: 2px solid white;
+    text-align: center;
+    padding: 0.5em;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+div.socials .gmail .text p.email {
+    color: var(--bg-color);
+}
+
+div.socials div.gmail img{
+    border: 2px solid white;
+    width: 196px;
+    height: 196px;
+}
+
