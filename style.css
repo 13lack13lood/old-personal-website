@@ -9,6 +9,7 @@
     --red-color: #ff6961;
     --yellow-color: #FDFD96;
     --lightblue-color: #c4faf8;
+    --pale-color: #ffdac1;
     --typewriterSpeed: 4s;
     --quote1-gradient: linear-gradient(
         45deg,
@@ -666,6 +667,37 @@ div.quote1 .author button span:hover {
     animation: typewriterP 800ms steps(20) 800ms forwards, blink 250ms steps(20) 800ms infinite;
 }
 
+[data-aos="typewriter-raccbot"] {
+    display: table;
+    opacity: 0;
+}
+
+[data-aos="typewriter-raccbot"].aos-animate {
+    position: relative;
+    opacity: 1;
+}
+
+[data-aos="typewriter-raccbot"].aos-animate::before,
+[data-aos="typewriter-raccbot"].aos-animate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+[data-aos="typewriter-raccbot"].aos-animate::before {
+    background: var(--bg-color);
+    animation: typewriterP 800ms steps(8) 800ms forwards;
+}
+
+[data-aos="typewriter-raccbot"].aos-animate::after {
+    width: .125em;
+    background: var(--light-color);
+    animation: typewriterP 800ms steps(8) 800ms forwards, blink 250ms steps(8) 800ms infinite;
+}
+
 [data-aos="typewriter-crossy"] {
     display: table;
     opacity: 0;
@@ -861,6 +893,30 @@ div.clownsweeper > div.text div p.github a{
 
 div.clownsweeper > div.text div p.github:hover {
     background-color: var(--purple-color);
+}
+
+div.raccbot > div h1 {
+    color: var(--pale-color);
+}
+
+div.raccbot > div.text {
+    border: 2px solid var(--pale-color);
+}
+
+div.raccbot > div.text p {
+    color: var(--pale-color);
+}
+
+div.raccbot > div.text div p {
+    border: 2px solid var(--pale-color);
+}
+
+div.raccbot > div.text div p.github a{
+    color: var(--pale-color);
+}
+
+div.raccbot > div.text div p.github:hover {
+    background-color: var(--pale-color);
 }
 
 div.crossy > div h1 {
