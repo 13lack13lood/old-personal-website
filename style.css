@@ -470,15 +470,18 @@ div.about > div.image > img {
     }
 
     div.about > div.image > img {
-        transform: scale(1);
-        width: 90%;
-        height: 90%;
+        width: 50%;
+        height: 50%;
+        /* display: block; */
+        margin-left: auto;
+        margin-top: auto;
     }
 
     div.about > div.image {
         padding-left: 0;
         margin-left: 1.5rem;
         margin-right: auto;
+        text-align: center;
     }
 
     [data-aos="typewriter1"] {
@@ -869,6 +872,19 @@ div.projects div > div.text div p.github:hover {
     float: right;
     color: transparent;
     text-align: center;
+}
+
+@media screen and (max-width: 1100px) {
+    div.projects > div.wrapper > div {
+        padding-left: 3em;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+
+    div.projects div > div.text {
+        width: 70vw;
+        overflow: hidden;
+    }
 }
 
 div.clownsweeper > div h1 {
@@ -1370,3 +1386,13 @@ div.socials div.gmail img{
     height: 196px;
 }
 
+@media screen and (max-width: 700px) {
+    div.socials img {
+        display: none;
+    }
+    
+    div.socials div.wrapper {
+        padding: 0;
+        margin: 0;
+    }
+}
