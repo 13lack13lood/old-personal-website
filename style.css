@@ -1232,6 +1232,43 @@ div.quote2 .author button span:hover {
     background-position: right;
 }
 
+@media screen and (max-width: 450px) {
+    div.quote2 .twenty h1 {
+        font-size: 8rem;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        position: relative;
+        right: 10vw;
+        color: var(--light-color);
+        border: none;
+    }
+
+    div.quote2 .five h1{
+        display: inline-block;
+        font-size: 7rem;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: var(--light-color);
+        border: none;
+    }
+
+    div.quote2 h1 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        font-style: italic; 
+        font-family: "Source Sans Pro", sans-serif;
+        padding: 0.5em;
+        border: 2px solid var(--light-color);
+        display: inline-block;
+    }
+
+    div.quote2 .twenty h1.years {
+        font-size: 2rem;
+    }
+}
+
 div.socials {
     width: 80vw;
     margin-left: auto;
