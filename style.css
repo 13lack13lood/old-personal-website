@@ -10,6 +10,7 @@
     --yellow-color: #FDFD96;
     --lightblue-color: #c4faf8;
     --pale-color: #ffdac1;
+    --lightgreen-color:#d2e7d6;
     --typewriterSpeed: 4s;
     --quote1-gradient: linear-gradient(
         45deg,
@@ -732,6 +733,37 @@ div.quote1 .author button span:hover {
     animation: typewriterP 800ms steps(11) 800ms forwards, blink 250ms steps(11) 800ms infinite;
 }
 
+[data-aos="typewriter-handtracking"] {
+    display: table;
+    opacity: 0;
+}
+
+[data-aos="typewriter-handtracking"].aos-animate {
+    position: relative;
+    opacity: 1;
+}
+
+[data-aos="typewriter-handtracking"].aos-animate::before,
+[data-aos="typewriter-handtracking"].aos-animate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+[data-aos="typewriter-handtracking"].aos-animate::before {
+    background: var(--bg-color);
+    animation: typewriterP 800ms steps(13) 800ms forwards;
+}
+
+[data-aos="typewriter-handtracking"].aos-animate::after {
+    width: .125em;
+    background: var(--light-color);
+    animation: typewriterP 800ms steps(13) 800ms forwards, blink 250ms steps(13) 800ms infinite;
+}
+
 [data-aos="typewriter-website"] {
     display: table;
     opacity: 0;
@@ -957,6 +989,30 @@ div.crossy > div.text div p.github a{
 
 div.crossy > div.text div p.github:hover {
     background-color: var(--blue-color);
+}
+
+div.handtracking > div h1 {
+    color: var(--lightgreen-color);
+}
+
+div.handtracking > div.text {
+    border: 2px solid var(--lightgreen-color);
+}
+
+div.handtracking > div.text p {
+    color: var(--lightgreen-color);
+}
+
+div.handtracking > div.text div p {
+    border: 2px solid var(--lightgreen-color);
+}
+
+div.handtracking > div.text div p.github a{
+    color: var(--lightgreen-color);
+}
+
+div.handtracking > div.text div p.github:hover {
+    background-color: var(--lightgreen-color);
 }
 
 div.tictactoe > div h1 {
