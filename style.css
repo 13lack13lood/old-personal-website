@@ -49,7 +49,8 @@ div.home {
     text-align: center;
 }
 
-div.home h1.name {
+div.home h1.name,
+div.home h1.error-404 {
     font-size: clamp(5rem, 3vw + 1rem, 4rem);
     font-family: "Source Code Pro", monospace;
     width: max-content;
@@ -58,7 +59,9 @@ div.home h1.name {
 }
 
 div.home h1.name::before,
-div.home h1.name::after {
+div.home h1.name::after,
+div.home h1.error-404::before,
+div.home h1.error-404::after {
     content: '';
     position: absolute;
     top: 0;
@@ -76,6 +79,17 @@ div.home h1::after {
     width: .125em;
     background: var(--light-color);
     animation: typewriter var(--typewriterSpeed) steps(24) 2s forwards, blink 750ms steps(24) infinite;
+}
+
+div.home#error-404 h1.error-404::before {
+    background: var(--bg-color);
+    animation: typewriter var(2) steps(9) 1s forwards;
+}
+
+div#error-404 h1.error-404::after {
+    width: .125em;
+    background: var(--light-color);
+    animation: typewriter var(2) steps(9) 1s forwards, blink 750ms steps(9) infinite;
 }
 
 @keyframes typewriter {
@@ -97,6 +111,15 @@ p.welcome {
     opacity: 0;
     transform: translateY(3rem);
     animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+}
+
+p.error-404 {
+    color: var(--accent-color);
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
 }
 
 @keyframes fadeInUp {
@@ -139,6 +162,17 @@ header {
     opacity: 0;
     transform: translateY(-3rem);
     animation: fadeInDown 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+}
+
+header.error-404 {
+    background-color: var(--accent-color);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    opacity: 1;
+    transform: none;
+    animation: none;
 }
 
 @keyframes fadeInDown {
