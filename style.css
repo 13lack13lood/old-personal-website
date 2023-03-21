@@ -81,7 +81,7 @@ div.home h1::after {
     animation: typewriter var(--typewriterSpeed) steps(24) 2s forwards, blink 750ms steps(24) infinite;
 }
 
-div.home#error-404 h1.error-404::before {
+div#error-404 h1.error-404::before {
     background: var(--bg-color);
     animation: typewriter var(2) steps(9) 1s forwards;
 }
