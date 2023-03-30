@@ -471,11 +471,12 @@ div.about > div.text p.print a {
 div.about > div.image {
     overflow: hidden;
     padding-left: 10em;
+    padding-top: 5em;
 }
 
 div.about > div.image > img {
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 70%;
     border: 7px solid var(--light-color);
 }
 
