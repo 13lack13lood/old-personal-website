@@ -11,6 +11,7 @@
     --lightblue-color: #c4faf8;
     --pale-color: #ffdac1;
     --lightgreen-color:#d2e7d6;
+    --lightred-color:#f55c7a;
     --typewriterSpeed: 4s;
     --quote1-gradient: linear-gradient(
         45deg,
@@ -675,6 +676,38 @@ div.quote1 .author button span:hover {
     background-position: right;
 }
 
+[data-aos="typewriter-finance"] {
+    display: table;
+    opacity: 0;
+}
+
+[data-aos="typewriter-finance"].aos-animate {
+    position: relative;
+    opacity: 1;
+}
+
+[data-aos="typewriter-finance"].aos-animate::before,
+[data-aos="typewriter-finance"].aos-animate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+[data-aos="typewriter-finance"].aos-animate::before {
+    background: var(--bg-color);
+    animation: typewriterP 800ms steps(15) 800ms forwards;
+}
+
+[data-aos="typewriter-finance"].aos-animate::after {
+    width: .125em;
+    background: var(--light-color);
+    animation: typewriterP 800ms steps(15) 800ms forwards, blink 250ms steps(15) 800ms infinite;
+}
+
+
 [data-aos="typewriter-clowns"] {
     display: table;
     opacity: 0;
@@ -952,6 +985,30 @@ div.projects div > div.text div p.github:hover {
         width: 70vw;
         overflow: hidden;
     }
+}
+
+div.finance > div h1 {
+    color: var(--lightred-color);
+}
+
+div.finance > div.text {
+    border: 2px solid var(--lightred-color);
+}
+
+div.finance > div.text p {
+    color: var(--lightred-color);
+}
+
+div.finance > div.text div p {
+    border: 2px solid var(--lightred-color);
+}
+
+div.finance > div.text div p.github a{
+    color: var(--lightred-color);
+}
+
+div.finance > div.text div p.github:hover {
+    background-color: var(--lightred-color);
 }
 
 div.clownsweeper > div h1 {
