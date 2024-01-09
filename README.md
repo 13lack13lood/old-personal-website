@@ -1,5 +1,5 @@
 # 13lack13lood.github.io
 
-My main website.
+My own personal website where you can learn more about me, discover more about my personal projects, and contact me.
 
-[Link](https://13lack13lood.github.io/)
+Hope you enjoy!
